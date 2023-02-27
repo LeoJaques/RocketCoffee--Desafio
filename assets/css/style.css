@@ -189,8 +189,9 @@ main {
 /*==============MAIN-IMAGE================*/
 
 .image_main {
-  width: 100%;
+  max-width: 920px;
   height: 100%;
+  margin: auto;
 }
 
 .image_main img {
