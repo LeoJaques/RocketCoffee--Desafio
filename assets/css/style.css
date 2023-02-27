@@ -100,6 +100,10 @@ main{
   background-color: var(--roxo-main);
 }
 
+.menu-expanded {
+  overflow: hidden;
+}
+
 /*==============MENU-BUTTONS================*/
 
 .buttons_header-menu {
@@ -109,7 +113,7 @@ main{
 .buttons_header-menu button {
   background-color: var(--background-color);
   position: absolute;
-  top: 2rem;
+  top: 2.5rem;
   right: 4rem;
   cursor: pointer;
   border: none;
