@@ -112,6 +112,7 @@ main{
   top: 2rem;
   right: 4rem;
   cursor: pointer;
+  border: none;
 }
 
 .close-menu {
