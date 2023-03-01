@@ -5,7 +5,7 @@
   --border-button-color: #29292e;
   --menu-link-color: #a8a8b3;
   --roxo-main: #8257e5;
-  
+
 
   font-size: 62.5%;
 }
@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
 }
 
-main{
+main {
   background-image: url(../images/Blur.png);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -33,21 +33,27 @@ main{
 }
 
 .container {
-  max-width: 900rem;
+  max-width: 918px;
   padding: 0 4rem;
+  margin: auto;
+  position: relative;
 }
 
 /*==============HEADER================*/
 .header-menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 8vh;
+}
+
+.desktop-logo {
+  display: none;
 }
 
 .image_header-logo {
   width: 17.1rem;
   height: 3rem;
+  margin-top: 1rem;
 }
 
 .image_header-logo img {
@@ -184,10 +190,10 @@ main {
   display: block;
   color: var(--background-color);
   font-weight: bold;
-  text-shadow: -1px -1px 0 var(--roxo-main), 
-  1px -1px 0 var(--roxo-main), 
-  -1px 1px 0 var(--roxo-main), 
-  1px 1px 0 var(--roxo-main);
+  text-shadow: -1px -1px 0 var(--roxo-main),
+    1px -1px 0 var(--roxo-main),
+    -1px 1px 0 var(--roxo-main),
+    1px 1px 0 var(--roxo-main);
 }
 
 /*==============MAIN-IMAGE================*/
@@ -205,18 +211,51 @@ main {
 
 
 
+@media (min-width: 800px) {
+  .buttons_header-menu {
+    display: none;
+  }
+
+  .button_main-mobile {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+  }
+
+  .button_main-mobile::after {
+    content: none;
+  }
+
+  main {
+    background: none;
+  }
+
+  .mobile_main-text {
+    display: none;
+  }
+
+  .title_main-mobile {
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 10.9rem;
+    letter-spacing: -0.03rem;
+    margin-bottom: 9rem;
+  }
+  .mobile-logo {
+    display: none;
+  }
+
+  .desktop-logo {
+    display: block;
+    width: 5rem;
+  }
+
+  .nav_header-menu {
+    display: initial;
+  }
+  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
