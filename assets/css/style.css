@@ -115,14 +115,14 @@ main {
 
 .buttons_header-menu {
   display: flex;
+  position: relative;
 }
 
 
 .buttons_header-menu button {
   background-color: var(--background-color);
   position: absolute;
-  top: 2.5rem;
-  right: 4rem;
+  right: 1rem;
   cursor: pointer;
   border: none;
 }
