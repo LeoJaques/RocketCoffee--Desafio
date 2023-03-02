@@ -42,6 +42,7 @@ main {
 /*==============HEADER================*/
 .header-menu {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 8vh;
 }
@@ -116,6 +117,7 @@ main {
   display: flex;
 }
 
+
 .buttons_header-menu button {
   background-color: var(--background-color);
   position: absolute;
@@ -132,6 +134,7 @@ main {
 /*==============MAIN-MOBILE================*/
 
 main {
+  max-width: 548;
   text-align: center;
 }
 
@@ -152,7 +155,7 @@ main {
   display: block;
 }
 
-.button_main-mobile {
+.button {
   background-color: transparent;
   border: var(--roxo-main) 1px solid;
   color: white;
@@ -164,10 +167,18 @@ main {
   font-size: 1.1rem;
   line-height: 1.5rem;
   letter-spacing: 0.02em;
-  display: flex;
-  margin: auto;
   align-items: center;
   cursor: pointer;
+}
+
+.button_main-mobile {
+  display: flex;
+  margin: auto;
+
+}
+
+.button_header-desktop {
+  display: none;
 }
 
 .button_main-mobile::after {
@@ -211,29 +222,33 @@ main {
 
 
 
-@media (min-width: 800px) {
+@media (min-width: 960px) {
+  header {
+    margin: 0 -4rem;
+    padding: 6rem 0;
+  }
+  
   .buttons_header-menu {
     display: none;
   }
-
+  
+  
   .button_main-mobile {
-    position: absolute;
-    top: 2rem;
-    right: 4rem;
+    display: none;
   }
-
-  .button_main-mobile::after {
-    content: none;
+  
+  .button_header-desktop {
+    display: initial;
   }
 
   main {
     background: none;
   }
-
+  
   .mobile_main-text {
     display: none;
   }
-
+  
   .title_main-mobile {
 
     font-style: normal;
@@ -249,13 +264,46 @@ main {
 
   .desktop-logo {
     display: block;
-    width: 5rem;
+    
   }
 
   .nav_header-menu {
     display: initial;
-  }
-  
 
+  }
+
+  
+  .list_header-link {
+  display: flex;
+  flex-direction: row;
+  position: initial;
+  top: 8vh;
+  left: 0rem;
+  width: initial;
+  height: initial;
+  background-color: none;
+ 
+}
+
+.list_header-link li a {
+  text-decoration: none;
+  color: var(--menu-link-color);
+  border: none;
+  display: inline;
+  padding: 0 3rem 0 0;
+  font-weight: 500;
+  font-size: 1.8rem;
+  position: initial;
+}
+
+.list_header-link li a:hover::before {
+  content: none;
+}
+
+.image_header-logo {
+  width: 5rem;
+  height: 3rem;
+  margin-top: 1rem;
+}
 
 }
