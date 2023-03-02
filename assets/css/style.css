@@ -242,7 +242,7 @@ main {
   }
 
   main {
-    background: none;
+    background: initial;
   }
   
   .mobile_main-text {
@@ -282,7 +282,7 @@ main {
   width: initial;
   height: initial;
   background-color: none;
- 
+ background-color: transparent;
 }
 
 .list_header-link li a {
@@ -290,10 +290,12 @@ main {
   color: var(--menu-link-color);
   border: none;
   display: inline;
-  padding: 0 3rem 0 0;
+  margin: 0 3rem 0 0;
+  padding: 0;
   font-weight: 500;
   font-size: 1.8rem;
   position: initial;
+  
 }
 
 .list_header-link li a:hover::before {
@@ -306,4 +308,27 @@ main {
   margin-top: 1rem;
 }
 
+body::after {
+  content: '';
+  width: 32rem;
+  height: 32rem;
+  background: var(--roxo-main);
+  filter: blur(20rem);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -10;
+}
+
+body::before {
+  content: '';
+  width: 32rem;
+  height: 32rem;
+  background: var(--roxo-main);
+  filter: blur(25rem);
+  position: absolute;
+  left: 0;
+  z-index: -10;
+  bottom: -16rem;
+}
 }
